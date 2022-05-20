@@ -32,7 +32,7 @@ export default ({ command }) => ({
   build: {
     lib: {
       entry: resolve(__dirname, "src/Mikrofrontend.tsx"),
-      name: "tms-mikrofrontend-template",
+      name: "aia",
       formats: ["es"],
       fileName: () => `bundle.js`,
     },
