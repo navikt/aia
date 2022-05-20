@@ -1,0 +1,37 @@
+name: "Build and deploy"
+on:
+  push:
+    branches:
+      - "main"
+env:
+  "IMAGE": "docker.pkg.github.com/${{ github.repository }}/aia:${{ github.sha }}"
+jobs:
+  build:
+    name: "build"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - uses: "actions/checkout@v2"
+      - uses: "actions/setup-node@v1"
+      - name: "install dependencies"
+        run: "npm ci"
+      - name: "Build application"
+        run: "npm run build"
+      - name: "Build and publish Docker image"
+        run:
+          "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
+          \ --username $GITHUB_REPOSITORY --password-stdin https://docker.pkg.github.com\
+          \ && docker push ${IMAGE}"
+        env:
+          "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+  deployToDev:
+    name: "Deploy to dev"
+    needs: "build"
+    runs-on: "ubuntu-18.04"
+    steps:
+      - uses: "actions/checkout@v2"
+      - name: "Deploy to dev-gcp"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "dev-gcp"
+          "RESOURCE": ".nais/dev-gcp/nais.yaml"
