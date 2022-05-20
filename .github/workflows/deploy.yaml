@@ -8,10 +8,10 @@ env:
 jobs:
   build:
     name: "build"
-    runs-on: "ubuntu-18.04"
+    runs-on: "ubuntu-20.04"
     steps:
       - uses: "actions/checkout@v2"
-      - uses: "actions/setup-node@v1"
+      - uses: "actions/setup-node@v3"
       - name: "install dependencies"
         run: "npm ci"
       - name: "Build application"
@@ -26,7 +26,7 @@ jobs:
   deployToDev:
     name: "Deploy to dev"
     needs: "build"
-    runs-on: "ubuntu-18.04"
+    runs-on: "ubuntu-20.04"
     steps:
       - uses: "actions/checkout@v2"
       - name: "Deploy to dev-gcp"
@@ -34,4 +34,4 @@ jobs:
         env:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
-          "RESOURCE": ".nais/dev-gcp/nais.yaml"
+          "RESOURCE": "nais/dev-gcp/nais.yaml"

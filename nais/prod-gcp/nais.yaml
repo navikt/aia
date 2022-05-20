@@ -8,7 +8,7 @@ metadata:
 spec:
   envFrom:
     - secret: aia-secrets
-  image: {{version}}
+  image: {{ image }}
   port: 7400
   liveness:
     path: /aia/internal/isAlive
