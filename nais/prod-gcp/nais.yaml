@@ -9,7 +9,7 @@ spec:
   envFrom:
     - secret: aia-secrets
   image: {{version}}
-  port: 7100
+  port: 7400
   liveness:
     path: /aia/internal/isAlive
     initialDelay: 10

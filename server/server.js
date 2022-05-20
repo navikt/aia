@@ -17,4 +17,4 @@ server.get(`${basePath}/internal/isReady`, (req, res) => {
   res.sendStatus(200);
 });
 
-server.listen(7100, () => console.log("Server listening on port 7100"));
+server.listen(7400, () => console.log("Server listening on port 7400"));
