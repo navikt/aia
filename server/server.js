@@ -4,8 +4,9 @@ const path = require("path");
 const basePath = "/aia";
 const buildPath = path.resolve(__dirname, "../dist");
 const server = express();
+const corsAllowedOrigin = process.env.CORS_ALLOWED_ORIGIN;
 
-server.use(cors({ origin: "http://localhost:3000" }));
+server.use(cors({ origin: corsAllowedOrigin }));
 
 server.use(basePath, express.static(buildPath));
 
