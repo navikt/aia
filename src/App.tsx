@@ -6,12 +6,12 @@ import "@navikt/ds-css";
 import "./App.css";
 
 function App() {
-  const { data } = useQuery(apiUrl, fetcher);
+  // const { data } = useQuery(apiUrl, fetcher);
 
   return (
     <main className="main">
       <div className="app">
-        <Komponent tekst={data?.tekst} />
+        <Komponent tekst="ArbeibedsflateForInnloggetArbeidssøker" />
       </div>
     </main>
   );
