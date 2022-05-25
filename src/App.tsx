@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="arbeidsflate-for-innlogget-arbeidssoker">
-      <Komponent tekst="Arbeidsdflate for innlogget arbeidssøker 🎉" />
+      <Komponent tekst="Arbeidsflate for innlogget arbeidssøker 🎉" />
     </div>
   );
 }
