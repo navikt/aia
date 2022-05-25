@@ -10,9 +10,7 @@ const Komponent = ({ tekst }: Props) => {
   return (
     <div className="komponent">
       <Panel>
-        <Heading spacing size="medium">
-          {tekst}
-        </Heading>
+        <Heading size="medium">{tekst}</Heading>
       </Panel>
     </div>
   );
