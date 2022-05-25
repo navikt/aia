@@ -1,5 +1,5 @@
 import React from "react";
-import { Panel } from "@navikt/ds-react";
+import { Ingress, Panel } from "@navikt/ds-react";
 import "./Komponent.css";
 
 interface Props {
@@ -10,7 +10,7 @@ const Komponent = ({ tekst }: Props) => {
   return (
     <div className="komponent">
       <Panel>
-        <p>{tekst}</p>
+        <Ingress>{tekst}</Ingress>
       </Panel>
     </div>
   );

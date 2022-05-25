@@ -9,11 +9,9 @@ function App() {
   // const { data } = useQuery(apiUrl, fetcher);
 
   return (
-    <main className="main">
-      <div className="app">
-        <Komponent tekst="ArbeibedsflateForInnloggetArbeidssøker" />
-      </div>
-    </main>
+    <div className="arbeidsflate-for-innlogget-arbeidssoker">
+      <Komponent tekst="Arbeibedsflate for innlogget arbeidssøker 🎉" />
+    </div>
   );
 }
 
