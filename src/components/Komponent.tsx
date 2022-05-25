@@ -1,5 +1,5 @@
 import React from "react";
-import { Ingress, Panel } from "@navikt/ds-react";
+import { Heading, Ingress, Panel } from "@navikt/ds-react";
 import "./Komponent.css";
 
 interface Props {
@@ -10,7 +10,9 @@ const Komponent = ({ tekst }: Props) => {
   return (
     <div className="komponent">
       <Panel>
-        <Ingress>{tekst}</Ingress>
+        <Heading spacing size="medium">
+          {tekst}
+        </Heading>
       </Panel>
     </div>
   );
