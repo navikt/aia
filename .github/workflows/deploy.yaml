@@ -35,3 +35,15 @@ jobs:
           "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
           "CLUSTER": "dev-gcp"
           "RESOURCE": "nais/dev-gcp/nais.yaml"
+  deployToProd:
+    name: "Deploy to dev"
+    needs: "build"
+    runs-on: "ubuntu-20.04"
+    steps:
+      - uses: "actions/checkout@v2"
+      - name: "Deploy to prod-gcp"
+        uses: "nais/deploy/actions/deploy@v1"
+        env:
+          "APIKEY": "${{ secrets.NAIS_DEPLOY_APIKEY }}"
+          "CLUSTER": "prod-gcp"
+          "RESOURCE": "nais/prod-gcp/nais.yaml"
