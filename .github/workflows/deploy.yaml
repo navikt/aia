@@ -36,7 +36,7 @@ jobs:
           "CLUSTER": "dev-gcp"
           "RESOURCE": "nais/dev-gcp/nais.yaml"
   deployToProd:
-    name: "Deploy to dev"
+    name: "Deploy to prod"
     needs: "build"
     runs-on: "ubuntu-20.04"
     steps:
