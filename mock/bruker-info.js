@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/api/bruker-info",
+    url: "/person/dittnav/veientilarbeid/bakveientilarbeid/startregistrering",
     method: "get",
     response: () => {
       return {

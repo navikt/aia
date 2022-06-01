@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/api/besvarelse",
+    url: "/person/dittnav/veientilarbeid/bakveientilarbeid/vedtakinfo/besvarelse",
     method: "get",
     response: () => {
       return {

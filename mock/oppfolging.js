@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/api/oppfolging",
+    url: "/person/dittnav/veientilarbeid/bakveientilarbeid/oppfolging",
     method: "get",
     response: () => {
       return {

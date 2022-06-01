@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/api/meldekortstatus",
+    url: "/meldekort/meldekort-api/api/person/meldekortstatus",
     method: "get",
     response: () => {
       return {
