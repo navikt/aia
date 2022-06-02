@@ -27,16 +27,14 @@ interface InnholdslasterProps {
 
 interface InnholdslasterState {
   timeout: boolean;
+  timer?: number;
 }
 
 class Innholdslaster extends React.Component<InnholdslasterProps, InnholdslasterState> {
-  timer?: number;
-
   constructor(props: InnholdslasterProps) {
     super(props);
 
-    this.state = { timeout: false };
-    this.timer = undefined;
+    this.state = { timeout: false, timer: undefined };
 
     this.renderChildren = this.renderChildren.bind(this);
     this.setTimer = this.setTimer.bind(this);
@@ -44,17 +42,19 @@ class Innholdslaster extends React.Component<InnholdslasterProps, Innholdslaster
   }
 
   setTimer() {
-    if (!this.timer) {
-      this.timer = window.setTimeout(() => {
-        this.setState({ timeout: true });
-      }, 200);
+    if (!this.state.timer) {
+      this.setState({
+        timer: window.setTimeout(() => {
+          this.setState({ timeout: true });
+        }, 200),
+      });
     }
   }
 
   clearTimer() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = undefined;
+    if (this.state.timer) {
+      clearTimeout(this.state.timer);
+      this.setState({ timer: undefined });
 
       // Deferred, slik at setState ikke er en del av render
       setTimeout(() => this.setState({ timeout: false }), 0);
