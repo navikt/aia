@@ -39,7 +39,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => ({
     },
   },
   test: {
-    global: true,
+    globals: true,
     environment: "jsdom",
     deps: {
       inline: ["@testing-library/user-event"],
