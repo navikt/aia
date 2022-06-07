@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - "main"
+      - "kopiere-kode"
 env:
   "IMAGE": "docker.pkg.github.com/${{ github.repository }}/aia:${{ github.sha }}"
 jobs:

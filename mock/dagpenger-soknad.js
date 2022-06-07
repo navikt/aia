@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/api/dagpenger/soknad",
+    url: "/person/dittnav/veientilarbeid/bakveientilarbeid/dagpenger/soknad",
     method: "get",
     response: () => {
       return [
