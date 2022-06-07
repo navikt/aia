@@ -1,6 +1,7 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteMockServe } from "vite-plugin-mock";
+import { ConfigEnv } from "vite";
+import { UserConfigExport } from "vitest/config";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import { terser } from "rollup-plugin-terser";
@@ -14,7 +15,7 @@ const imports = {
   "react-dom": reactDomUrl,
 };
 
-export default ({ command }) => ({
+export default ({ command }: ConfigEnv): UserConfigExport => ({
   plugins: [
     react(),
     terser(),
