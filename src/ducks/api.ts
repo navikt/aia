@@ -1,5 +1,5 @@
 import { contextpathDittNav, erMikrofrontend } from "../utils/app-state-utils";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import { bakveienTilArbeidUrl, minSideProxyUrl } from "../url";
 
 export enum STATUS {
