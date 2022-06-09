@@ -23,7 +23,7 @@ describe("Tester at komponenten rendres slik den skal", () => {
     const mockSetReaktivering = jest.fn();
     const providerProps: ProviderProps = {
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       oppfolging: {
         kanReaktiveres: true,

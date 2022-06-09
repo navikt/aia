@@ -25,8 +25,8 @@ const grunndata = {
     },
   },
   autentiseringData: {
-    securityLevel: InnloggingsNiva.LEVEL_4,
-    loggedIn: true,
+    level: InnloggingsNiva.LEVEL_4,
+    authenticated: true,
   },
   underOppfolgingData: {
     underOppfolging: true,

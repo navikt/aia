@@ -24,7 +24,7 @@ interface OwnProps {
 type OppfolgingProviderProps = OwnProps;
 
 const OppfolgingBrukerregistreringProvider = ({ children }: OppfolgingProviderProps) => {
-  const { securityLevel } = useAutentiseringData();
+  const { level } = useAutentiseringData();
 
   const [meldekortstatusState, setMeldekortstatusState] = React.useState<Meldekortstatus.State>(
     Meldekortstatus.initialState
@@ -54,7 +54,7 @@ const OppfolgingBrukerregistreringProvider = ({ children }: OppfolgingProviderPr
       UNDER_OPPFOLGING_URL
     );
     fetchData<FeatureToggle.State, FeatureToggle.Data>(featureToggleState, setFeatureToggleState, featureTogglesUrl);
-    if (securityLevel === InnloggingsNiva.LEVEL_4) {
+    if (level === InnloggingsNiva.LEVEL_4) {
       fetchData<Oppfolging.State, Oppfolging.Data>(oppfolgingState, setOppfolgingState, VEILARBOPPFOLGING_URL);
       fetchData<Brukerregistrering.State, Brukerregistrering.Data>(
         brukerregistreringState,
@@ -63,10 +63,10 @@ const OppfolgingBrukerregistreringProvider = ({ children }: OppfolgingProviderPr
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [securityLevel]);
+  }, [level]);
 
   const avhengigheter: any[] = [underOppfolgingState];
-  if (securityLevel === InnloggingsNiva.LEVEL_4) {
+  if (level === InnloggingsNiva.LEVEL_4) {
     avhengigheter.push(oppfolgingState, brukerregistreringState);
   }
 

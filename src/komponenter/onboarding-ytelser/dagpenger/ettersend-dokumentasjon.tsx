@@ -1,5 +1,5 @@
 import { BodyShort, Link } from "@navikt/ds-react";
-import { mine_dagpenger_url } from "../../../url";
+import { mineDagpengerUrl } from "../../../url";
 import { useAmplitudeData } from "../../../contexts/amplitude-context";
 import lagHentTekstForSprak, { Tekster } from "../../../lib/lag-hent-tekst-for-sprak";
 import { useSprakValg } from "../../../contexts/sprak";
@@ -33,8 +33,8 @@ const EttersendDokumentasjon = ({ amplitudeTemaNavn }: Props) => {
     <BodyShort className={"blokk-xs"}>
       {`${tekst("ettersend")} `}
       <Link
-        href={mine_dagpenger_url}
-        onClick={() => loggLenkeKlikk(`Går til Mine dagpenger fra ${amplitudeTemaNavn}`, mine_dagpenger_url)}
+        href={mineDagpengerUrl}
+        onClick={() => loggLenkeKlikk(`Går til Mine dagpenger fra ${amplitudeTemaNavn}`, mineDagpengerUrl)}
       >
         {tekst("mineDagpenger")}
       </Link>

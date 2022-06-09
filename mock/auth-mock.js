@@ -1,11 +1,11 @@
 export default [
   {
-    url: "/person/dittnav/veientilarbeid/api/auth",
+    url: "/tms-min-side-proxy/login/status",
     method: "get",
     response: () => {
       return {
-        loggedIn: true,
-        securityLevel: "Level4",
+        authenticated: true,
+        level: "Level4",
       };
     },
   },

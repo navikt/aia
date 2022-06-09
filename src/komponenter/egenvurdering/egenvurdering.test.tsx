@@ -39,7 +39,7 @@ describe("Tester egenvurdering-komponenten", () => {
       oppfolging: { servicegruppe: Servicegruppe.IVURD },
       brukerregistrering: standardInnsatsBrukerregistrering,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
     };
     render(<Egenvurdering />, { wrapper: contextProviders(props) as FunctionComponent });
@@ -82,7 +82,7 @@ describe("Tester egenvurdering-komponenten", () => {
       oppfolging: { servicegruppe: Servicegruppe.IVURD },
       brukerregistrering: standardInnsatsBrukerregistrering,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
     };
     render(<Egenvurdering />, { wrapper: contextProviders(props) as FunctionComponent });

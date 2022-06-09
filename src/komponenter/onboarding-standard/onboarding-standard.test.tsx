@@ -61,7 +61,7 @@ describe("OnboardingStandard-komponenten", () => {
       oppfolging: standardOppfolging,
       brukerregistrering: standardInnsatsBrukerregistrering,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.vis-onboarding-standard": true,
@@ -77,7 +77,7 @@ describe("OnboardingStandard-komponenten", () => {
       oppfolging: ikkeStandardOppfolging,
       brukerregistrering: standardInnsatsBrukerregistrering,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.vis-onboarding-standard": true,
@@ -93,7 +93,7 @@ describe("OnboardingStandard-komponenten", () => {
       oppfolging: standardOppfolging,
       brukerregistrering: standardInnsatsBrukerregistrering,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.vis-onboarding-standard": true,
@@ -109,7 +109,7 @@ describe("OnboardingStandard-komponenten", () => {
       oppfolging: standardOppfolging,
       brukerregistrering: standardInnsatsBrukerregistrering,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.vis-onboarding-standard": false,
@@ -125,7 +125,7 @@ describe("OnboardingStandard-komponenten", () => {
       oppfolging: standardOppfolging,
       brukerregistrering: standardInnsatsBrukerregistreringAldriJobbet,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.vis-onboarding-standard": false,
@@ -141,7 +141,7 @@ describe("OnboardingStandard-komponenten", () => {
       oppfolging: standardOppfolging,
       brukerregistrering: standardInnsatsBrukerregistreringGammel,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.vis-onboarding-standard": false,

@@ -1,5 +1,6 @@
 import { contextpathDittNav, erMikrofrontend } from "../utils/app-state-utils";
 import { nanoid } from "nanoid";
+import { bakveienTilArbeidUrl, minSideProxyUrl } from "../url";
 
 export enum STATUS {
   OK = "OK",
@@ -33,17 +34,17 @@ export const requestConfig = (): RequestInit => {
 
 const contextpath = erMikrofrontend() ? contextpathDittNav : "";
 const MELDEKORT_URL = `/meldekort/meldekort-api/api`;
-export const BAKVEIEN = `${contextpath}/bakveientilarbeid`,
-  VEILARBOPPFOLGING_URL = `${BAKVEIEN}/oppfolging`,
-  UNDER_OPPFOLGING_URL = `${BAKVEIEN}/underoppfolging`,
-  BRUKERINFO_URL = `${BAKVEIEN}/startregistrering`,
-  BRUKERREGISTRERING_URL = `${BAKVEIEN}/registrering`,
-  ULESTEDIALOGER_URL = `${BAKVEIEN}/dialog/antallUleste`,
-  EGENVURDERINGBESVARELSE_URL = `${BAKVEIEN}/vedtakinfo/besvarelse`,
+export const AUTH_URL = `${minSideProxyUrl}/login/status`,
+  VEILARBOPPFOLGING_URL = `${bakveienTilArbeidUrl}/oppfolging`,
+  UNDER_OPPFOLGING_URL = `${bakveienTilArbeidUrl}/underoppfolging`,
+  BRUKERINFO_URL = `${bakveienTilArbeidUrl}/startregistrering`,
+  BRUKERREGISTRERING_URL = `${bakveienTilArbeidUrl}/registrering`,
+  ULESTEDIALOGER_URL = `${bakveienTilArbeidUrl}/dialog/antallUleste`,
+  EGENVURDERINGBESVARELSE_URL = `${bakveienTilArbeidUrl}/vedtakinfo/besvarelse`,
   FEATURE_URL = `${contextpath}/api/feature`,
-  MOTESTOTTE_URL = `${BAKVEIEN}/vedtakinfo/motestotte`,
+  MOTESTOTTE_URL = `${bakveienTilArbeidUrl}/vedtakinfo/motestotte`,
   NESTE_MELDEKORT_URL = `${MELDEKORT_URL}/person/meldekort`,
   PAABEGYNTE_SOKNADER_URL = `${contextpath}/saksoversikt-api/tjenester/saker/hentPaabegynteSoknader`,
   SAKSTEMA_URL = `${contextpath}/saksoversikt-api/tjenester/sakstema`,
-  DP_INNSYN_URL = `${BAKVEIEN}/dagpenger`,
+  DP_INNSYN_URL = `${bakveienTilArbeidUrl}/dagpenger`,
   MELDEKORTSTATUS_URL = `${MELDEKORT_URL}/person/meldekortstatus`;

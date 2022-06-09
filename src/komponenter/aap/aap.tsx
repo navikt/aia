@@ -29,13 +29,13 @@ const TEKSTER: Tekster<string> = {
 };
 
 const Aap = () => {
-  const { securityLevel } = useAutentiseringData();
+  const { level } = useAutentiseringData();
   const { underOppfolging } = React.useContext(UnderOppfolgingContext).data;
   const { erSykmeldtMedArbeidsgiver } = useBrukerinfoData();
   const { data: featuretoggleData } = React.useContext(FeaturetoggleContext);
   const tekst = lagHentTekstForSprak(TEKSTER, useSprakValg().sprak);
 
-  const isLevel4 = securityLevel === InnloggingsNiva.LEVEL_4;
+  const isLevel4 = level === InnloggingsNiva.LEVEL_4;
   const skjulRadFeaturetoggleAktivert = featuretoggleData && featuretoggleData["veientilarbeid.rydding.skjulAAPRad"];
 
   const kanViseKomponent = erSykmeldtMedArbeidsgiver && underOppfolging && isLevel4 && !skjulRadFeaturetoggleAktivert;
