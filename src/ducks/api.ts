@@ -13,21 +13,22 @@ export enum STATUS {
 export interface DataElement {
   status: STATUS;
 }
-
+/*
 const getCookie = (name: string) => {
   const re = new RegExp(`${name}=([^;]+)`);
   const match = re.exec(document.cookie);
   return match !== null ? match[1] : "";
 };
+*/
 
 export const requestConfig = (): RequestInit => {
   return {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
-      NAV_CSRF_PROTECTION: getCookie("NAV_CSRF_PROTECTION"),
-      "NAV-Consumer-Id": "veientilarbeid",
-      "NAV-Call-Id": nanoid(),
+      //  NAV_CSRF_PROTECTION: getCookie("NAV_CSRF_PROTECTION"),
+      //  "NAV-Consumer-Id": "veientilarbeid",
+      //  "NAV-Call-Id": nanoid(),
     },
   };
 };
