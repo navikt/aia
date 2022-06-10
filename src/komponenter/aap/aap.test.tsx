@@ -10,7 +10,7 @@ describe("Aap", () => {
       brukerInfo: { erSykmeldtMedArbeidsgiver: true },
       underOppfolging: { underOppfolging: true },
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
     };
 
@@ -23,7 +23,7 @@ describe("Aap", () => {
       brukerInfo: { erSykmeldtMedArbeidsgiver: true },
       underOppfolging: { underOppfolging: true },
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       featureToggle: {
         "veientilarbeid.rydding.skjulAAPRad": true,
@@ -39,7 +39,7 @@ describe("Aap", () => {
       brukerInfo: { erSykmeldtMedArbeidsgiver: false },
       underOppfolging: { underOppfolging: true },
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
     };
 
@@ -52,7 +52,7 @@ describe("Aap", () => {
       brukerInfo: { erSykmeldtMedArbeidsgiver: true },
       underOppfolging: { underOppfolging: false },
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
     };
     const { container } = render(<Aap />, { wrapper: contextProviders(props) });

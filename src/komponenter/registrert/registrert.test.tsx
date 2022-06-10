@@ -28,7 +28,7 @@ const meldekort = {
 };
 
 const providerProps: ProviderProps = {
-  autentisering: { securityLevel: InnloggingsNiva.LEVEL_4 },
+  autentisering: { level: InnloggingsNiva.LEVEL_4 },
   meldekort: meldekort,
   brukerInfo: {
     rettighetsgruppe: "DAGP",
@@ -69,7 +69,7 @@ describe("Test av registreringskomponenten", () => {
       underOppfolging: { underOppfolging: true },
       meldekort,
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       oppfolging: {
         formidlingsgruppe: Formidlingsgruppe.ARBS,
@@ -83,7 +83,7 @@ describe("Test av registreringskomponenten", () => {
     const props: ProviderProps = {
       underOppfolging: { underOppfolging: false },
       autentisering: {
-        securityLevel: InnloggingsNiva.LEVEL_4,
+        level: InnloggingsNiva.LEVEL_4,
       },
       oppfolging: {
         formidlingsgruppe: Formidlingsgruppe.ARBS,

@@ -67,7 +67,7 @@ export const AmplitudeProvider = (props: { children: React.ReactNode }) => {
   const pabegynteSoknaderData = useDpInnsynPaabegynteSoknaderData();
   const oppfolgingData = React.useContext(OppfolgingContext).data;
   const brukerInfoData = useBrukerinfoData();
-  const { securityLevel: nivaa } = useAutentiseringData();
+  const { level: nivaa } = useAutentiseringData();
   const { underOppfolging } = React.useContext(UnderOppfolgingContext).data;
   const meldekortContext = React.useContext(Meldekort.MeldekortContext);
   const meldekortStatusContext = React.useContext(Meldekortstatus.MeldekortstatusContext);

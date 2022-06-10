@@ -14,14 +14,14 @@ export interface State extends DataElement {
 }
 
 export interface Data {
-  securityLevel: InnloggingsNiva;
-  loggedIn: boolean;
+  level: InnloggingsNiva;
+  authenticated: boolean;
 }
 
 export const initialState: State = {
   data: {
-    securityLevel: InnloggingsNiva.UKJENT,
-    loggedIn: false,
+    level: InnloggingsNiva.UKJENT,
+    authenticated: false,
   },
   status: STATUS.NOT_STARTED,
 };

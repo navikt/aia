@@ -19,10 +19,10 @@ import sjekkOmBrukerErStandardInnsatsgruppe from "../lib/er-standard-innsatsgrup
 type Props = {};
 
 export default function InnholdMetrics() {
-  const { securityLevel } = useAutentiseringData();
+  const { level } = useAutentiseringData();
   const { underOppfolging } = useUnderOppfolgingData();
 
-  if (!underOppfolging || securityLevel === InnloggingsNiva.LEVEL_3) return null;
+  if (!underOppfolging || level === InnloggingsNiva.LEVEL_3) return null;
 
   return <Metrics />;
 }

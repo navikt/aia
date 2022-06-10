@@ -66,7 +66,7 @@ const hentSprakValg = (): SprakValg.State => {
 };
 
 const DataProvider = ({ children }: Props) => {
-  const { securityLevel } = useAutentiseringData();
+  const { level } = useAutentiseringData();
   const { underOppfolging } = React.useContext(UnderOppfolgingContext).data;
   const [motestotteState, setMotestotteState] = React.useState<Motestotte.State>(Motestotte.initialState);
   const [meldekortState, setMeldekortState] = React.useState<Meldekort.State>(Meldekort.initialState);
@@ -90,15 +90,15 @@ const DataProvider = ({ children }: Props) => {
   const foreslaattInnsatsgruppe = selectForeslattInnsatsgruppe(data);
 
   React.useEffect(() => {
-    if (securityLevel !== InnloggingsNiva.LEVEL_4) {
+    if (level !== InnloggingsNiva.LEVEL_4) {
       return;
     }
     fetchData<Meldekort.State, Meldekort.Data>(meldekortState, setMeldekortState, NESTE_MELDEKORT_URL);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [securityLevel]);
+  }, [level]);
 
   React.useEffect(() => {
-    if (securityLevel !== InnloggingsNiva.LEVEL_4) {
+    if (level !== InnloggingsNiva.LEVEL_4) {
       return;
     }
 
@@ -142,12 +142,12 @@ const DataProvider = ({ children }: Props) => {
 
     setValgtSprak(hentSprakValg());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [securityLevel, underOppfolging]);
+  }, [level, underOppfolging]);
 
   const avhengigheter: any[] = [];
   const ventPa: any[] = [];
 
-  if (securityLevel === InnloggingsNiva.LEVEL_4) {
+  if (level === InnloggingsNiva.LEVEL_4) {
     avhengigheter.push(brukerInfoState);
     ventPa.push(ulesteDialogerState);
 

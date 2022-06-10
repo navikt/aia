@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/person/dittnav/veientilarbeid/bakveientilarbeid/dagpenger/paabegynte",
+    url: "/bakveientilarbeid/dagpenger/paabegynte",
     method: "get",
     response: () => {
       return [

@@ -19,12 +19,12 @@ type Props = {
 const ReaktiveringMelding = (props: Props & ViewportProps) => {
   const amplitudeData = useAmplitudeData();
   const { kanReaktiveres } = React.useContext(OppfolgingContext).data;
-  const { securityLevel } = useAutentiseringData();
+  const { level } = useAutentiseringData();
 
   const [harVistTilBruker, setHarVistTilBruker] = React.useState<boolean>(false);
 
   const { setReaktivering } = props;
-  const isLevel4 = securityLevel === InnloggingsNiva.LEVEL_4;
+  const isLevel4 = level === InnloggingsNiva.LEVEL_4;
   const kanViseKomponent = isLevel4 && kanReaktiveres;
 
   if (props.inViewport && !harVistTilBruker) {

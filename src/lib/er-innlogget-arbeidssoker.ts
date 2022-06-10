@@ -14,7 +14,7 @@ export function erInnloggetArbeidssoker({
 }) {
   return (
     oppfolgingData.formidlingsgruppe === "ARBS" &&
-    autentiseringData.securityLevel === InnloggingsNiva.LEVEL_4 &&
+    autentiseringData.level === InnloggingsNiva.LEVEL_4 &&
     underOppfolgingData.underOppfolging
   );
 }

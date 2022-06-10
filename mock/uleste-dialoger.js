@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/person/dittnav/veientilarbeid/bakveientilarbeid/dialog/antallUleste",
+    url: "/bakveientilarbeid/dialog/antallUleste",
     method: "get",
     response: () => {
       return {

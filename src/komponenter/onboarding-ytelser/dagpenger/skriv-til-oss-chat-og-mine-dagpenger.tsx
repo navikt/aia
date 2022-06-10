@@ -4,7 +4,7 @@ import { useAmplitudeData } from "../../../contexts/amplitude-context";
 import { loggAktivitet } from "../../../metrics/metrics";
 import lagHentTekstForSprak from "../../../lib/lag-hent-tekst-for-sprak";
 import { useSprakValg } from "../../../contexts/sprak";
-import { mine_dagpenger_url } from "../../../url";
+import { mineDagpengerUrl } from "../../../url";
 
 const TEKSTER = {
   nb: {
@@ -63,8 +63,8 @@ const SkrivTilOssChatOgMineDagpenger = (props: Props) => {
       <br />
       {`${tekst("innsyn")} `}
       <Link
-        href={mine_dagpenger_url}
-        onClick={() => loggLenkeKlikk(`Går til Mine dagpenger fra ${amplitudeTemaNavn}`, mine_dagpenger_url)}
+        href={mineDagpengerUrl}
+        onClick={() => loggLenkeKlikk(`Går til Mine dagpenger fra ${amplitudeTemaNavn}`, mineDagpengerUrl)}
       >
         {tekst("mineDagpenger")}
       </Link>

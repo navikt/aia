@@ -1,6 +1,6 @@
 export default [
   {
-    url: "/api/motestotte",
+    url: "/bakveientilarbeid/vedtakinfo/motestotte",
     method: "get",
     response: () => {
       return {
