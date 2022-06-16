@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "main"
-      - "bakveientilarbeid"
+      - "unleash"
 env:
   "IMAGE": "docker.pkg.github.com/${{ github.repository }}/aia:${{ github.sha }}"
 jobs:
