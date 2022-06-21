@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - "main"
-      - "unleash"
+      - "ghcr"
 env:
-  "IMAGE": "docker.pkg.github.com/${{ github.repository }}/aia:${{ github.sha }}"
+  "IMAGE": "ghcr.io/${{ github.repository }}/aia:${{ github.sha }}"
 jobs:
   build:
     name: "build"
@@ -20,7 +20,7 @@ jobs:
       - name: "Build and publish Docker image"
         run:
           "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
-          \ --username $GITHUB_REPOSITORY --password-stdin https://docker.pkg.github.com\
+          \ --username $GITHUB_REPOSITORY --password-stdin https://ghcr.io\
           \ && docker push ${IMAGE}"
         env:
           "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
