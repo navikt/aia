@@ -12,7 +12,7 @@ import Egenvurdering from "./komponenter/egenvurdering/egenvurdering";
 import Motestotte from "./komponenter/motestotte/motestotte";
 import InnholdMetrics from "./innhold/innhold-metrics";
 import InViewport from "./komponenter/in-viewport/in-viewport";
-import GenerelleFliser from "./komponenter/dittnav/generelle-fliser";
+import IkkeRegistrertWrapper from "./komponenter/ikke-registrert-wrapper/ikke-registrert-wrapper";
 import AapRad from "./komponenter/aap/aap";
 import "@navikt/ds-css";
 import "./App.css";
@@ -35,7 +35,7 @@ const App: React.FC<{}> = () => {
         <Egenvurdering />
         <Motestotte />
         <AktivitetDialogMeldekort />
-        <GenerelleFliser />
+        <IkkeRegistrertWrapper />
       </Rad>
 
       <AapRad />

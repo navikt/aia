@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
-import GenerelleFliser from "./generelle-fliser";
+import IkkeRegistrertWrapper from "./ikke-registrert-wrapper";
 import { contextProviders, ProviderProps } from "../../test/test-context-providers";
 
 describe("Tester komponenten", () => {
@@ -8,7 +8,7 @@ describe("Tester komponenten", () => {
     const props: ProviderProps = {
       underOppfolging: { underOppfolging: true },
     };
-    const { container } = render(<GenerelleFliser />, { wrapper: contextProviders(props) });
+    const { container } = render(<IkkeRegistrertWrapper />, { wrapper: contextProviders(props) });
     expect(container).toBeEmptyDOMElement();
   });
 
@@ -17,7 +17,7 @@ describe("Tester komponenten", () => {
       underOppfolging: { underOppfolging: false },
       brukerregistrering: null,
     };
-    const { container } = render(<GenerelleFliser />, { wrapper: contextProviders(props) });
+    const { container } = render(<IkkeRegistrertWrapper />, { wrapper: contextProviders(props) });
     expect(container).not.toBeEmptyDOMElement();
   });
 
@@ -25,7 +25,7 @@ describe("Tester komponenten", () => {
     const props: ProviderProps = {
       underOppfolging: { underOppfolging: false },
     };
-    render(<GenerelleFliser />, { wrapper: contextProviders(props) });
+    render(<IkkeRegistrertWrapper />, { wrapper: contextProviders(props) });
     expect(screen.getByText("Din pensjon")).toBeInTheDocument();
     expect(screen.getByText("Mistet jobben?")).toBeInTheDocument();
     expect(screen.getByText("Skjemaer")).toBeInTheDocument();
