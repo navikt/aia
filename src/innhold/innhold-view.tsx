@@ -8,7 +8,7 @@ import KrrMelding from "../komponenter/krr-melding/krr-melding";
 import Registrert from "../komponenter/registrert/registrert";
 import AktivitetDialogMeldekort from "./aktivitet-dialog-meldekort";
 import InnholdMetrics from "./innhold-metrics";
-import GenerelleFliser from "../komponenter/dittnav/generelle-fliser";
+import IkkeRegistrertWrapper from "../komponenter/ikke-registrert-wrapper/ikke-registrert-wrapper";
 import InViewport from "../komponenter/in-viewport/in-viewport";
 import StatusTittel from "../komponenter/registrert/status-tittel";
 import EkspanderbartInnsyn from "../komponenter/innsyn/ekspanderbart-innsyn";
@@ -31,7 +31,7 @@ const InnholdView = () => {
         <Egenvurdering />
         <Motestotte />
         <AktivitetDialogMeldekort />
-        <GenerelleFliser />
+        <IkkeRegistrertWrapper />
       </Rad>
 
       <AapRad />

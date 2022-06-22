@@ -1,10 +1,8 @@
 import * as React from "react";
-import DittNAVFliser from "./components/DittnavFliser";
-import "./css/generelle-fliser.css";
 import { UnderOppfolgingContext } from "../../contexts/under-oppfolging";
 import IkkeRegistrert from "../ikke-registrert/ikke-registrert";
 
-const GenerelleFliser = () => {
+const IkkeRegistrertWrapper = () => {
   const { underOppfolging } = React.useContext(UnderOppfolgingContext).data;
   const goto = new URLSearchParams(window.location.search).get("goTo");
   const skalTilRegistrering = goto === "registrering";
@@ -18,9 +16,8 @@ const GenerelleFliser = () => {
   return (
     <>
       <IkkeRegistrert skalTilRegistrering={skalTilRegistrering} />
-      <DittNAVFliser />
     </>
   );
 };
 
-export default GenerelleFliser;
+export default IkkeRegistrertWrapper;
