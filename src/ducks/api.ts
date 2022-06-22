@@ -47,4 +47,4 @@ export const AUTH_URL = `${minSideProxyUrl}/login/status`,
   PAABEGYNTE_SOKNADER_URL = `${contextpath}/saksoversikt-api/tjenester/saker/hentPaabegynteSoknader`,
   SAKSTEMA_URL = `${contextpath}/saksoversikt-api/tjenester/sakstema`,
   DP_INNSYN_URL = `${bakveienTilArbeidUrl}/dagpenger`,
-  MELDEKORTSTATUS_URL = `${bakveienTilArbeidUrl}/meldekort/meldekortstatus`;
+  MELDEKORTSTATUS_URL = `${bakveienTilArbeidUrl}/meldekort/status`;
