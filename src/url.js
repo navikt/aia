@@ -15,14 +15,14 @@ const getEnvironment = () => {
 
 const BAKVEIENTILARBEID_URL = {
   local: 'http://localhost:3000/bakveientilarbeid',
-  development: 'https://arbeid.dev.nav.no/bakveientilarbeid',
+  development: 'https://www.dev.nav.no/bakveientilarbeid',
   production: 'https://www.nav.no/bakveientilarbeid',
 };
 
 const MIN_SIDE_PROXY_URL = {
   local: "http://localhost:3000/tms-min-side-proxy",
-  development: "https://person.dev.nav.no/tms-min-side-proxy",
-  production: "https://person.intern.nav.no/tms-min-side-proxy",
+  development: "https://www.dev.nav.no/tms-min-side-proxy",
+  production: "https://www.intern.nav.no/tms-min-side-proxy",
 };
 
 const MINE_DAGPENGER_URL = {
