@@ -16,7 +16,7 @@ const getEnvironment = () => {
 const BAKVEIENTILARBEID_URL = {
   local: 'http://localhost:3000/bakveientilarbeid',
   development: 'https://www.dev.nav.no/bakveientilarbeid',
-  production: 'https://www.nav.no/bakveientilarbeid',
+  production: 'https://www.intern.nav.no/bakveientilarbeid',
 };
 
 const MIN_SIDE_PROXY_URL = {
