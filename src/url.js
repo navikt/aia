@@ -21,8 +21,8 @@ const BAKVEIENTILARBEID_URL = {
 
 const MIN_SIDE_PROXY_URL = {
   local: "http://localhost:3000/tms-min-side-proxy",
-  development: "https://person.dev.nav.no/tms-min-side-proxy",
-  production: "https://person.intern.nav.no/tms-min-side-proxy",
+  development: "https://www.dev.nav.no/tms-min-side-proxy",
+  production: "https://www.intern.nav.no/tms-min-side-proxy",
 };
 
 const MINE_DAGPENGER_URL = {
